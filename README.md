@@ -73,4 +73,5 @@ All metrics are printed inline in the notebook outputs.
 
 ---
 
-## 🏁
+## 🏁 MIT License
+
