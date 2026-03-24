@@ -2,8 +2,21 @@
 
 Self-contained Jupyter notebooks for **knowledge graph–based recommender systems** on **MovieLens 1M**, with **temporal learning** and **fairness/exposure bias mitigation**.
 
-Think of it as your one-stop playground for trying out multiple recommender models without worrying about preprocessing headaches.
+## 🎬 Project Overview
 
+This project studies **knowledge graph–based recommender systems** on the **MovieLens 1M dataset**, focusing on how **popularity bias evolves over time** and how fairness can be enforced across user and item groups. The dataset was extracted from a specific time range (May–December 2000) and split into **eight monthly temporal slices**, simulating the real-world evolution of user preferences and item popularity.
+
+Movies are grouped into **popularity tiers**—Low, Medium, High—based on interaction counts in each slice. Users are classified as **mainstream** or **niche** depending on their engagement with high-popularity movies. This design allows the project to measure how recommendation systems favor popular items over time and to evaluate interventions that mitigate this bias.
+
+The project examines three stages of modeling:  
+
+1. **Baseline models** – standard graph-based recommenders (DistMult, TransH, LightGCN, KGCN, PinSAGE) without temporal or fairness adjustments.  
+2. **Temporal models** – introducing **temporal regularization** to stabilize embeddings across slices and reduce abrupt shifts in recommendations.  
+3. **Final models** – incorporating **fairness regularization and exposure mitigation**, ensuring that niche movies and underrepresented user groups receive fairer visibility.  
+
+📊 **Metrics tracked** include Recall@K, NDCG@K, **Exposure Fairness (EO)**, **Demographic Parity (DP)**, and **Gini Index**, allowing analysis of both recommendation quality and fairness.  
+
+By combining **temporal slicing**, **popularity tiers**, and **fairness-aware modeling**, this project provides a systematic exploration of **how popularity bias dominates over time** and how it can be mitigated, offering insights for designing fairer and more robust recommender systems.
 ---
 
 ## 📂 Repository Layout
